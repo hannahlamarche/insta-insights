@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Data</title>
+</head>
+<body>
+    <h1>Instagram Data</h1>
+    <h2>Followers</h2>
+    <pre id="followers"></pre>
+
+    <h2>Don’t Follow Me Back</h2>
+    <pre id="dont-follow-me-back"></pre>
+
+    <h2>I Don’t Follow Back</h2>
+    <pre id="i-dont-follow-back"></pre>
+
+    <script>
+        async function fetchData(endpoint, elementId) {
+            try {
+                const response = await fetch(`http://localhost:5000/api/${endpoint}`);
+                const data = await response.json();
+                document.getElementById(elementId).textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        fetchData('followers', 'followers');
+        fetchData('dont-follow-me-back', 'dont-follow-me-back');
+        fetchData('i-dont-follow-back', 'i-dont-follow-back');
+    </script>
+</body>
+</html>
