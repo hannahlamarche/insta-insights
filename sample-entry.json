@@ -52,4 +52,43 @@
             "full_name": "Cat"
         }
     ]
+},
+{
+    "_id": {
+      "$oid": "123456111213141516abcdee"
+    },
+    "username": "another-user",
+    "date": "2024-09-02 16:40",
+    "followers": [
+    ],
+    "following": [
+        {
+            "username": "artist",
+            "full_name": "Peter"
+        },
+        {
+            "username": "influencer",
+            "full_name": "Sam"
+        },
+        {
+            "username": "celebrity",
+            "full_name": "Jennifer"
+        }
+    ],
+    "dont_follow_me_back": [
+        {
+            "username": "artist",
+            "full_name": "Peter"
+        },
+        {
+            "username": "influencer",
+            "full_name": "Sam"
+        },
+        {
+            "username": "celebrity",
+            "full_name": "Jennifer"
+        }
+    ],
+    "i_dont_follow_back": [
+    ]
 }]

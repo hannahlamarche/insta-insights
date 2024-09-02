@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, ConfigDict
 from typing import List
 from datetime import datetime
 from .Account import Account
@@ -22,30 +22,20 @@ class Report(BaseModel):
             "example": {
                 "username": "user.name",
                 "date": "2024-09-01T00:00:00Z",
-                "followers": [
-                    {
-                        "username": "follower1",
-                        "full_name": "Follower One"
-                    }
-                ],
-                "following": [
-                    {
-                        "username": "following1",
-                        "full_name": "Following One"
-                    }
-                ],
+                "followers": [{"username": "follower1", "full_name": "Follower One"}],
+                "following": [{"username": "following1", "full_name": "Following One"}],
                 "dont_follow_me_back": [
                     {
                         "username": "dont_follow_me_back1",
-                        "full_name": "Not Following Back One"
+                        "full_name": "Not Following Back One",
                     }
                 ],
                 "i_dont_follow_back": [
                     {
                         "username": "i_dont_follow_back1",
-                        "full_name": "I Don't Follow Back One"
+                        "full_name": "I Don't Follow Back One",
                     }
-                ]
+                ],
             }
         },
     )
