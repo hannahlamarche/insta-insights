@@ -3,7 +3,7 @@
 import type { CancelablePromise } from './core/CancelablePromise';
 import { OpenAPI } from './core/OpenAPI';
 import { request as __request } from './core/request';
-import type { ReadRootGetData, ReadRootGetResponse } from './types.gen';
+import type { ReadRootGetData, ReadRootGetResponse, CreateReportReportsPostData, CreateReportReportsPostResponse, ReadReportsReportsGetData, ReadReportsReportsGetResponse, ReadReportReportsReportIdGetData, ReadReportReportsReportIdGetResponse, UpdateReportReportsReportIdPutData, UpdateReportReportsReportIdPutResponse, DeleteReportReportsReportIdDeleteData, DeleteReportReportsReportIdDeleteResponse } from './types.gen';
 
 /**
  * Read Root
@@ -15,6 +15,114 @@ import type { ReadRootGetData, ReadRootGetResponse } from './types.gen';
 export const readRootGet = (data: ReadRootGetData = {}): CancelablePromise<ReadRootGetResponse> => { return __request(OpenAPI, {
     method: 'GET',
     url: '/',
+    query: {
+        testing: data.testing
+    },
+    errors: {
+        422: 'Validation Error'
+    }
+}); };
+
+/**
+ * Create Report
+ * @param data The data for the request.
+ * @param data.requestBody
+ * @param data.testing
+ * @returns Report Successful Response
+ * @throws ApiError
+ */
+export const createReportReportsPost = (data: CreateReportReportsPostData): CancelablePromise<CreateReportReportsPostResponse> => { return __request(OpenAPI, {
+    method: 'POST',
+    url: '/reports',
+    query: {
+        testing: data.testing
+    },
+    body: data.requestBody,
+    mediaType: 'application/json',
+    errors: {
+        422: 'Validation Error'
+    }
+}); };
+
+/**
+ * Read Reports
+ * @param data The data for the request.
+ * @param data.testing
+ * @returns Report Successful Response
+ * @throws ApiError
+ */
+export const readReportsReportsGet = (data: ReadReportsReportsGetData = {}): CancelablePromise<ReadReportsReportsGetResponse> => { return __request(OpenAPI, {
+    method: 'GET',
+    url: '/reports',
+    query: {
+        testing: data.testing
+    },
+    errors: {
+        422: 'Validation Error'
+    }
+}); };
+
+/**
+ * Read Report
+ * @param data The data for the request.
+ * @param data.reportId
+ * @param data.testing
+ * @returns Report Successful Response
+ * @throws ApiError
+ */
+export const readReportReportsReportIdGet = (data: ReadReportReportsReportIdGetData): CancelablePromise<ReadReportReportsReportIdGetResponse> => { return __request(OpenAPI, {
+    method: 'GET',
+    url: '/reports/{report_id}',
+    path: {
+        report_id: data.reportId
+    },
+    query: {
+        testing: data.testing
+    },
+    errors: {
+        422: 'Validation Error'
+    }
+}); };
+
+/**
+ * Update Report
+ * @param data The data for the request.
+ * @param data.reportId
+ * @param data.requestBody
+ * @param data.testing
+ * @returns Report Successful Response
+ * @throws ApiError
+ */
+export const updateReportReportsReportIdPut = (data: UpdateReportReportsReportIdPutData): CancelablePromise<UpdateReportReportsReportIdPutResponse> => { return __request(OpenAPI, {
+    method: 'PUT',
+    url: '/reports/{report_id}',
+    path: {
+        report_id: data.reportId
+    },
+    query: {
+        testing: data.testing
+    },
+    body: data.requestBody,
+    mediaType: 'application/json',
+    errors: {
+        422: 'Validation Error'
+    }
+}); };
+
+/**
+ * Delete Report
+ * @param data The data for the request.
+ * @param data.reportId
+ * @param data.testing
+ * @returns Report Successful Response
+ * @throws ApiError
+ */
+export const deleteReportReportsReportIdDelete = (data: DeleteReportReportsReportIdDeleteData): CancelablePromise<DeleteReportReportsReportIdDeleteResponse> => { return __request(OpenAPI, {
+    method: 'DELETE',
+    url: '/reports/{report_id}',
+    path: {
+        report_id: data.reportId
+    },
     query: {
         testing: data.testing
     },
