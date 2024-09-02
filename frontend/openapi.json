@@ -137,18 +137,18 @@
         }
       }
     },
-    "/reports/{report_id}": {
+    "/reports/{username}": {
       "get": {
         "summary": "Read Report",
-        "operationId": "read_report_reports__report_id__get",
+        "operationId": "read_report_reports__username__get",
         "parameters": [
           {
-            "name": "report_id",
+            "name": "username",
             "in": "path",
             "required": true,
             "schema": {
               "type": "string",
-              "title": "Report Id"
+              "title": "Username"
             }
           },
           {
@@ -187,15 +187,15 @@
       },
       "put": {
         "summary": "Update Report",
-        "operationId": "update_report_reports__report_id__put",
+        "operationId": "update_report_reports__username__put",
         "parameters": [
           {
-            "name": "report_id",
+            "name": "username",
             "in": "path",
             "required": true,
             "schema": {
               "type": "string",
-              "title": "Report Id"
+              "title": "Username"
             }
           },
           {
@@ -244,15 +244,15 @@
       },
       "delete": {
         "summary": "Delete Report",
-        "operationId": "delete_report_reports__report_id__delete",
+        "operationId": "delete_report_reports__username__delete",
         "parameters": [
           {
-            "name": "report_id",
+            "name": "username",
             "in": "path",
             "required": true,
             "schema": {
               "type": "string",
-              "title": "Report Id"
+              "title": "Username"
             }
           },
           {

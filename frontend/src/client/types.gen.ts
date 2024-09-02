@@ -43,24 +43,24 @@ export type ReadReportsReportsGetData = {
 
 export type ReadReportsReportsGetResponse = (Array<Report>);
 
-export type ReadReportReportsReportIdGetData = {
-    reportId: string;
+export type ReadReportReportsUsernameGetData = {
     testing?: boolean;
+    username: string;
 };
 
-export type ReadReportReportsReportIdGetResponse = (Report);
+export type ReadReportReportsUsernameGetResponse = (Report);
 
-export type UpdateReportReportsReportIdPutData = {
-    reportId: string;
+export type UpdateReportReportsUsernamePutData = {
     requestBody: Report;
     testing?: boolean;
+    username: string;
 };
 
-export type UpdateReportReportsReportIdPutResponse = (Report);
+export type UpdateReportReportsUsernamePutResponse = (Report);
 
-export type DeleteReportReportsReportIdDeleteData = {
-    reportId: string;
+export type DeleteReportReportsUsernameDeleteData = {
     testing?: boolean;
+    username: string;
 };
 
-export type DeleteReportReportsReportIdDeleteResponse = (Report);
+export type DeleteReportReportsUsernameDeleteResponse = (Report);

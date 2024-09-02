@@ -3,7 +3,7 @@
 import type { CancelablePromise } from './core/CancelablePromise';
 import { OpenAPI } from './core/OpenAPI';
 import { request as __request } from './core/request';
-import type { ReadRootGetData, ReadRootGetResponse, CreateReportReportsPostData, CreateReportReportsPostResponse, ReadReportsReportsGetData, ReadReportsReportsGetResponse, ReadReportReportsReportIdGetData, ReadReportReportsReportIdGetResponse, UpdateReportReportsReportIdPutData, UpdateReportReportsReportIdPutResponse, DeleteReportReportsReportIdDeleteData, DeleteReportReportsReportIdDeleteResponse } from './types.gen';
+import type { ReadRootGetData, ReadRootGetResponse, CreateReportReportsPostData, CreateReportReportsPostResponse, ReadReportsReportsGetData, ReadReportsReportsGetResponse, ReadReportReportsUsernameGetData, ReadReportReportsUsernameGetResponse, UpdateReportReportsUsernamePutData, UpdateReportReportsUsernamePutResponse, DeleteReportReportsUsernameDeleteData, DeleteReportReportsUsernameDeleteResponse } from './types.gen';
 
 /**
  * Read Root
@@ -65,16 +65,16 @@ export const readReportsReportsGet = (data: ReadReportsReportsGetData = {}): Can
 /**
  * Read Report
  * @param data The data for the request.
- * @param data.reportId
+ * @param data.username
  * @param data.testing
  * @returns Report Successful Response
  * @throws ApiError
  */
-export const readReportReportsReportIdGet = (data: ReadReportReportsReportIdGetData): CancelablePromise<ReadReportReportsReportIdGetResponse> => { return __request(OpenAPI, {
+export const readReportReportsUsernameGet = (data: ReadReportReportsUsernameGetData): CancelablePromise<ReadReportReportsUsernameGetResponse> => { return __request(OpenAPI, {
     method: 'GET',
-    url: '/reports/{report_id}',
+    url: '/reports/{username}',
     path: {
-        report_id: data.reportId
+        username: data.username
     },
     query: {
         testing: data.testing
@@ -87,17 +87,17 @@ export const readReportReportsReportIdGet = (data: ReadReportReportsReportIdGetD
 /**
  * Update Report
  * @param data The data for the request.
- * @param data.reportId
+ * @param data.username
  * @param data.requestBody
  * @param data.testing
  * @returns Report Successful Response
  * @throws ApiError
  */
-export const updateReportReportsReportIdPut = (data: UpdateReportReportsReportIdPutData): CancelablePromise<UpdateReportReportsReportIdPutResponse> => { return __request(OpenAPI, {
+export const updateReportReportsUsernamePut = (data: UpdateReportReportsUsernamePutData): CancelablePromise<UpdateReportReportsUsernamePutResponse> => { return __request(OpenAPI, {
     method: 'PUT',
-    url: '/reports/{report_id}',
+    url: '/reports/{username}',
     path: {
-        report_id: data.reportId
+        username: data.username
     },
     query: {
         testing: data.testing
@@ -112,16 +112,16 @@ export const updateReportReportsReportIdPut = (data: UpdateReportReportsReportId
 /**
  * Delete Report
  * @param data The data for the request.
- * @param data.reportId
+ * @param data.username
  * @param data.testing
  * @returns Report Successful Response
  * @throws ApiError
  */
-export const deleteReportReportsReportIdDelete = (data: DeleteReportReportsReportIdDeleteData): CancelablePromise<DeleteReportReportsReportIdDeleteResponse> => { return __request(OpenAPI, {
+export const deleteReportReportsUsernameDelete = (data: DeleteReportReportsUsernameDeleteData): CancelablePromise<DeleteReportReportsUsernameDeleteResponse> => { return __request(OpenAPI, {
     method: 'DELETE',
-    url: '/reports/{report_id}',
+    url: '/reports/{username}',
     path: {
-        report_id: data.reportId
+        username: data.username
     },
     query: {
         testing: data.testing
