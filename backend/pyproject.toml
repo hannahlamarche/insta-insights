@@ -6,7 +6,7 @@ authors = ["Hannah Lamarche"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.10"
 fastapi = "^0.111.0"
 motor = "^3.5.0"
 loguru = "^0.7.2"

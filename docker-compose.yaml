@@ -2,7 +2,6 @@ services:
   backend:
     build:
       context: backend
-      target: development
     ports:
       - "8000:8000"
     volumes:
@@ -11,14 +10,19 @@ services:
     environment:
       - DATA_DIR=/app/data
       - MONGODB_URI=mongodb://mongodb/insta-insights
-      - INSTAGRAM_API_KEY=${INSTAGRAM_API_KEY}
     depends_on:
       - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
 
   frontend:
     build:
       context: frontend
-      target: development
     ports:
       - "3000:3000"
     volumes:
