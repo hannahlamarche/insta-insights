@@ -1,0 +1,55 @@
+[{
+    "_id": {
+      "$oid": "123456111213141516abcdef"
+    },
+    "username": "sample-user",
+    "date": "2024-09-02 16:40",
+    "followers": [
+        {
+            "username": "johndoe4life",
+            "full_name": "John Doe"
+        },
+        {
+            "username": "doedoebrain",
+            "full_name": "Jane Doe"
+        },
+        {
+            "username": "cat.account",
+            "full_name": "Cat"
+        }
+    ],
+    "following": [
+        {
+            "username": "johndoe4life",
+            "full_name": "John Doe"
+        },
+        {
+            "username": "dog.account",
+            "full_name": "Dog"
+        },
+        {
+            "username": "real-person",
+            "full_name": "Person"
+        }
+    ],
+    "dont_follow_me_back": [
+        {
+            "username": "dog.account",
+            "full_name": "Dog"
+        },
+        {
+            "username": "real-person",
+            "full_name": "Person"
+        }
+    ],
+    "i_dont_follow_back": [
+        {
+            "username": "doedoebrain",
+            "full_name": "Jane Doe"
+        },
+        {
+            "username": "cat.account",
+            "full_name": "Cat"
+        }
+    ]
+}]
